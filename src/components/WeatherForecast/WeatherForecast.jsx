@@ -1,15 +1,15 @@
 import "./weatherForecast.css";
 import React from "react";
-function Weather() {
+function Weather({forecast}) {
   return (
     <div className="weather">
-      <h2>Day of the Week</h2>
-      <img src="" alt="" />
+      <h2>{forecast.day}</h2>
+      <img src= {forecast.img} alt= {forecast.imgAlt} />
       <p>
-        <span>conditions: </span>current weather conditions
+        <span>conditions: {forecast.conditions} </span>
       </p>
       <p>
-        <span>time: </span>time of day
+        <span>time: {forecast.time} </span>
       </p>
     </div>
   );

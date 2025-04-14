@@ -1,4 +1,4 @@
-// src/App.jsx
+import Weather from "./components/WeatherForecast/WeatherForecast";
 
 const App = () => {
   const weatherForecasts = [
@@ -37,12 +37,14 @@ const App = () => {
       conditions: "cloudy",
       time: "Night",
     },
-  ];
+  ];       
   return (
     <>
       <h1>Local Weather</h1>
       <section>
-        
+       {weatherForecasts.map((forecast)=>(
+          <Weather forecast={forecast}/>
+       ))}
       </section>
     </>
   );
